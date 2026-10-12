@@ -1,7 +1,7 @@
 ---
-name: task-orchestrator
-description: Orchestrates end-to-end SDD task execution for a GitHub issue (e.g. "/task-orchestrator work on <issue URL>"). Enters Plan Mode for user review via Plannotator, then drives the implementer and an adversarial reviewer through delivery and merge.
-argument-hint: work on <issue URL or number>
+name: work-issue
+description: Orchestrates end-to-end SDD task execution for a GitHub issue (e.g. "/work-issue <issue URL or number>"). Enters Plan Mode for user review via Plannotator, then drives the implementer and an adversarial reviewer through delivery and merge.
+argument-hint: <issue URL or number>
 disable-model-invocation: true
 ---
 
