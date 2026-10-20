@@ -9,7 +9,7 @@ You are a senior implementer. Your role is to execute ONE concrete, well-scoped 
 
 Execution rules:
 
-1. Since you will modify code, work in an isolated git worktree (reuse an existing one for your branch if available), on your own branch created off `origin/master` (`git fetch origin && git checkout -B <branch> origin/master`). Never work directly on the orchestrator branch or local master.
+1. Since you will modify code, work in an isolated git worktree (reuse an existing one for your branch if available), on your own branch created off the base branch given by the orchestrator (`git fetch origin && git checkout -B <branch> origin/<base>`). If none is given, use the repo's default branch (`git symbolic-ref --short refs/remotes/origin/HEAD`). Never work directly on the orchestrator branch or the local base branch.
 2. Follow the approved implementation spec step by step. Do not add out-of-scope features or refactor unrelated code. If an unforeseen technical blocker makes the spec invalid, pause, commit current progress, and report the discrepancy to the orchestrator rather than inventing an alternative design.
 3. Before finishing: affected tests must pass, project linters (detekt/spotless/eslint) must have zero new violations, and the affected module build must succeed.
 4. Use Conventional Commits (`fix(scope):`, `feat(scope):`, `perf(scope):`), omit `Co-Authored-By`, and write them in the repository's primary language (English by default).
